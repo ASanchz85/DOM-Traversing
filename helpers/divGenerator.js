@@ -1,4 +1,5 @@
 import { BGCOLOURS } from "./constants.js";
+import { saveBG } from "./savingData.js";
 
 const d = document;
 
@@ -25,6 +26,7 @@ const divDrawBG = (collection) => {
     collection[i].style.backgroundColor = BGCOLOURS[i];
     collection[i].addEventListener("click", () => {
       $body.style.backgroundColor = BGCOLOURS[i];
+      saveBG(BGCOLOURS[i]);
     });
   }
 };
